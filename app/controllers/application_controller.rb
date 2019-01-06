@@ -3,8 +3,8 @@ class ApplicationController < ActionController::API
 	require 'jsonwebtoken'
 
   # Rails redirect everything to index for production
-  def fallback_index_html
-    render :file => 'public/index.html'
+  def welcome
+    render html: '<h1 style="text-align:center; padding-top:50px;">Hi, Welcome to Andio Rails Api</h1>'.html_safe
   end
 
 	protected
