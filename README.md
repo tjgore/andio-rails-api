@@ -4,7 +4,7 @@ Andio is an aid platform that connects people in need to willing volunteers in y
 
 This repo is the Rails api [https://andio.herokuapp.com](https://andio.herokuapp.com) for the react app [https://andio-react.surge.sh](https://andio-react.surge.sh)
 
-You can find the react repo [https://andio-react.github.com](https://andio-react.github.com)
+You can find the react repo here [https://github.com/tjgore/andio-react](https://github.com/tjgore/andio-react)
 
 #### Backend
 * Docker (optional)
@@ -12,7 +12,7 @@ You can find the react repo [https://andio-react.github.com](https://andio-react
 * Rails active storage
 * Ruby 2.5.1
 * jwt
-* Database: sqlite3
+* Database: sqlite3 (for dev), postgres (for prod)
 * Deployed on Heroku
 
 ### Installation locally
@@ -52,3 +52,18 @@ You can find the react repo [https://andio-react.github.com](https://andio-react
   ```
  
  Change CORS origin domain in /config/initializers/cors.rb to your own domain
+
+
+#### Deploy to Heroku 
+
+```
+$ heroku login
+
+$ heroku create <app-name>
+
+// optional 
+$ heroku builpacks:set heroku/ruby
+
+$ git push heroku master 
+
+```
