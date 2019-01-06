@@ -1,0 +1,10 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  subject: Lifting Furniture
+
+two:
+  id: 2
+  subject: Wash my car
+

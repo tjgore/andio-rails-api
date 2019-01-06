@@ -1,0 +1,44 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  title: Lifting Furniture
+  description: Lifting alot of furniture up a bunch of stairs
+  category: material
+  status: not fullfilled
+  user_id: 1
+  start_count: 0
+  start_date: 2019-01-02 20:29:54.345097
+  location: Brooklyn, NY 11207
+  latitude: 40.6655101
+  longitude: -73.8918897
+  active: 1
+
+two:
+  id: 2
+  title: Wash my car
+  description: My car is really dirty and needs to be cleaned
+  category: service
+  status: not fullfilled
+  user_id: 2
+  start_count: 0
+  start_date: 2019-01-02 20:29:54.345097
+  location: New York City
+  latitude: 40.6976684
+  longitude: -74.2605573
+  active: 1
+
+
+three:
+  id: 3
+  title: Drive me home
+  description: My car is broken i need a ride on friday
+  category: service
+  status: not fullfilled
+  user_id: 2
+  start_count: 4
+  start_date: 2019-01-02 20:29:54.345097
+  location: New York City
+  latitude: 40.6976684
+  longitude: -74.2605573
+  active: 1
