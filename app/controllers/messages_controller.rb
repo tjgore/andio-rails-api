@@ -29,7 +29,7 @@ class MessagesController < ApplicationController
 
   #GET messages/unread
   def unread
-    @messages = Message.select('id, conversation_id, to_id, read').where(to_id: @current_user.id).where(read: 0).group('messages.id, messages.conversation_id').order("created_at ASC")
+    @messages = Message.all.except(:id).select('id, conversation_id, to_id, read').where(to_id: @current_user.id).where(read: 0).group('messages.conversation_id').order("created_at ASC")
      render json: @messages, status: :ok
   end
 
