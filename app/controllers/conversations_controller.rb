@@ -5,7 +5,7 @@ class ConversationsController < ApplicationController
   # GET /conversations
   # Get all current user conversation ids
   def index
-    @conversations = Conversation.where("to_id = :current_user_id OR from_id = :current_user_id", {current_user_id: @current_user.id}).joins(:messages).take(10).uniq.as_json
+    @conversations = Conversation.where("to_id = :current_user_id OR from_id = :current_user_id", {current_user_id: @current_user.id}).order(updated_at: :desc).joins(:messages).take(10).uniq.as_json
     
     convos = []
     @conversations.each do |convo|
